@@ -1,8 +1,9 @@
 import openai
+import config
 
 
 def gpt3(stext):
-    openai.api_key = ''
+    openai.api_key = config.GPT_KEY
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=stext,
